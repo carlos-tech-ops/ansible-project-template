@@ -1,5 +1,0 @@
----
-- name: Create devops_user
-  ansible.builtin.user:
-    name: devops_user
-    state: present
