@@ -1,0 +1,7 @@
+---
+- name: Sample Ansible Playbook
+  hosts: all
+  become: true
+
+  roles:
+    - sample_role
