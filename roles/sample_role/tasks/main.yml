@@ -1,0 +1,4 @@
+---
+- name: Placeholder task
+  debug:
+    msg: "Sample role task executed."
