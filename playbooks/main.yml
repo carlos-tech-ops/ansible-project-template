@@ -1,7 +1,7 @@
 ---
-- name: Sample Ansible Playbook
+- name: Linux Maintenance Automation
   hosts: all
   become: true
 
   roles:
-    - sample_role
+    - user_provision
