@@ -5,3 +5,4 @@
 
   roles:
     - user_provision
+    - file_ops
