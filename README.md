@@ -11,16 +11,17 @@ This repository is not just a folder layout — it’s a **battle-tested framewo
 
 ## Features
 
-- Modular `roles/` structure
-- Dedicated inventory and configuration files
-- Click-by-click GitHub creation (no CLI dependency)
-- Beginner to advanced project-ready
-- Easily extendable for:
-  - Cloud provisioning (AWS, Azure)
-  - Linux user management
-  - Service control
-  - Cron jobs and task scheduling
-  - Security compliance automation
+•	Modular roles/ structure
+	•	Passwordless SSH control from macOS to Linux
+	•	Role-based automation (user_provision, file_ops)
+	•	Click-by-click GitHub execution (no CLI setup required)
+	•	GitOps-compatible and CI/CD-ready
+	•	Easily extendable for:
+	•	Cloud provisioning (AWS, Azure)
+	•	Linux hardening and user management
+	•	Service deployment
+	•	Cron jobs / scheduled ops
+	•	Compliance automation
 
 ## Directory Structure
 
@@ -32,9 +33,14 @@ ansible-project-template/
 ├── playbooks/
 │   └── main.yml              # Main playbook (calls roles)
 ├── roles/
-│   └── sample_role/
-│       ├── tasks/main.yml    # Task definitions
-│       ├── vars/main.yml     # Variables (optional)
-│       └── handlers/main.yml # Handlers (optional)
+│   ├── user_provision/       # Creates the devops_user on remote machine
+│   │   ├── tasks/
+│   │   │   └── main.yml
+│   │   └── vars/
+│   │       └── main.yml
+│   └── file_ops/             # Manages /opt/ops.txt with date/time stamp
+│       └── tasks/
+│           └── main.yml
 ├── .gitignore
 └── README.md
+```
