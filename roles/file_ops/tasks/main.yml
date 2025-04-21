@@ -4,5 +4,10 @@
     dest: /opt/ops.txt
     owner: root
     group: root
-    mode: '0444'
+    mode: '0644'
     force: true
+
+- name: Lock ops.txt file as read-only
+  ansible.builtin.file:
+    path: /opt/ops.txt
+    mode: '0444'
