@@ -1,8 +1,9 @@
+ansible-playbook playbooks/main.yml --ask-become-pass
 ---
-- name: Create ops.txt file in /opt
-  copy:
-    content: "This file was created by Ansible."
+- name: Create or overwrite /opt/ops.txt
+  ansible.builtin.copy:
+    content: "Rewritten by Ansible on {{ ansible_date_time.date }} at {{ ansible_date_time.time }}"
     dest: /opt/ops.txt
     owner: root
     group: root
-    mode: '0644'
+    mode: '0444'
