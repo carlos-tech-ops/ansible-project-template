@@ -1,0 +1,8 @@
+---
+- name: Create ops.txt file in /opt
+  copy:
+    content: "This file was created by Ansible."
+    dest: /opt/ops.txt
+    owner: root
+    group: root
+    mode: '0644'
