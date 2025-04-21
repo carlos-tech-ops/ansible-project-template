@@ -1,4 +1,3 @@
-ansible-playbook playbooks/main.yml --ask-become-pass
 ---
 - name: Create or overwrite /opt/ops.txt
   ansible.builtin.copy:
